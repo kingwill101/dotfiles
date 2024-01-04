@@ -1,0 +1,21 @@
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
+alias rsynccp='rsync --recursive --times --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable --chmod=Du+rwx,go-rwx,Fu+rw,go-rw --no-perms'  
+alias rsyncmv='rsync --remove-source-files --recursive --times --modify-window=2 --progress --verbose --itemize-changes --stats --human-readable --chmod=Du+rwx,go-rwx,Fu+rw,go-rw --no-perms'
+export FLUTTER="~/flutter/bin"
+export PATH="$PATH:/home/kingwill101/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/.dotnet/"
+export PATH="$PATH:$HOME/flutter/bin/"
+eval "$(direnv hook zsh)"
+
+# Turso
+export PATH="/home/kingwill101/.turso:$PATH"
